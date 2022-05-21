@@ -1,5 +1,5 @@
 <template>
-  <header class="p-4 bg-white box-between">
+  <header class="fixed inset-x-0 p-4 bg-white box-between">
     <!-- logo -->
     <NuxtLink to="/">
       <!-- img -->

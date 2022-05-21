@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white px-4 pb-4 pt-8 w-64">
+  <nav class="bg-white p-4 w-64 min-w-64 max-w-64">
     <!-- links -->
     <NuxtLink
       v-for="link in links"
@@ -34,7 +34,7 @@ export default {
         {
           to: '/',
           icon: 'users-alt',
-          text: 'Personnel List',
+          text: 'Personeel List',
         },
         {
           to: '/schedule',

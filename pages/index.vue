@@ -1,12 +1,15 @@
 <template>
-  <main class="min-h-screen">
+  <main class="min-h-screen p-8 w-full">
     <p v-if="error" class="text-red-500">
       {{ error }}
     </p>
 
-    <div v-for="(user, index) in users" :key="'user-' + user.email + index">
+    <!-- search form, add personeel -->
+    <IndexTitleBox />
+
+    <!-- <div v-for="(user, index) in users" :key="'user-' + user.email + index">
       emp
-    </div>
+    </div> -->
   </main>
 </template>
 

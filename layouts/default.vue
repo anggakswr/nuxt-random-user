@@ -1,12 +1,8 @@
 <template>
   <div class="min-h-screen bg-gray-100">
-    <!-- mobile popups -->
-    <!-- <SortFilterPopup />
-    <MapViewPopup /> -->
-
     <Header />
 
-    <div class="flex gap-x-4">
+    <div class="flex" :style="{ paddingTop: '84px' }">
       <Sidebar />
       <Nuxt />
     </div>
