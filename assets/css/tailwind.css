@@ -13,3 +13,13 @@
 .box-between {
   @apply flex items-center justify-between;
 }
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
