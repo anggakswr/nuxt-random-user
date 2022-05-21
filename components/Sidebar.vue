@@ -1,5 +1,8 @@
 <template>
-  <nav class="bg-white p-4 w-64 min-w-64 max-w-64">
+  <nav
+    class="bg-white p-4 sidebar fixed inset-y-0 left-0"
+    :style="{ top: '84px' }"
+  >
     <!-- links -->
     <NuxtLink
       v-for="link in links"
@@ -55,5 +58,11 @@ export default {
 a.nuxt-link-exact-active {
   color: #33bdbf;
   font-weight: bold;
+}
+
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
 }
 </style>

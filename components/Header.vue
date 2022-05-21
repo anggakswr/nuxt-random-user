@@ -10,7 +10,7 @@
       <!-- hello text -->
       <p>Hello, <b class="text-brand">Gadjian User</b></p>
 
-      <button class="rounded-full overflow-hidden border border-black">
+      <button class="rounded-full overflow-hidden border">
         <!-- photo -->
         <img src="https://picsum.photos/40" alt="User" width="40px" />
       </button>

@@ -7,9 +7,23 @@
     <!-- search form, add personeel -->
     <IndexTitleBox />
 
-    <!-- <div v-for="(user, index) in users" :key="'user-' + user.email + index">
-      emp
-    </div> -->
+    <!-- loading placeholder -->
+    <section v-if="loading" class="grid grid-cols-4 mt-8 gap-4">
+      <IndexUserSkeleton />
+      <IndexUserSkeleton />
+      <IndexUserSkeleton />
+      <IndexUserSkeleton />
+    </section>
+
+    <section v-else class="grid grid-cols-4 mt-8 gap-4">
+      <IndexUser
+        v-for="(user, index) in users"
+        :key="'user-' + user.email + index"
+        :user="user"
+      />
+    </section>
+
+    <p v-if="!loading && !users.length" class="mt-8">No data</p>
   </main>
 </template>
 
@@ -28,7 +42,7 @@ export default {
   },
   head() {
     return {
-      title: 'Personnel List | Gadjian',
+      title: 'Personeel List | Gadjian',
     }
   },
   methods: {

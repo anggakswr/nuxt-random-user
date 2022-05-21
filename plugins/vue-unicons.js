@@ -6,7 +6,15 @@ import {
   uniSchedule,
   uniSearch,
   uniPlus,
+  uniEllipsisH,
 } from 'vue-unicons/dist/icons'
 
-Unicon.add([uniUsersAlt, uniEstate, uniSchedule, uniSearch, uniPlus])
+Unicon.add([
+  uniUsersAlt,
+  uniEstate,
+  uniSchedule,
+  uniSearch,
+  uniPlus,
+  uniEllipsisH,
+])
 Vue.use(Unicon)
