@@ -1,9 +1,5 @@
 <template>
   <main class="min-h-screen p-4 md:p-8 w-full">
-    <p v-if="error" class="text-red-500">
-      {{ error }}
-    </p>
-
     <!-- search form, add personeel -->
     <IndexTitleBox />
 
@@ -25,7 +21,12 @@
     </section>
 
     <!-- if there's no data -->
-    <p v-if="!loading && !users.length" class="mt-8">No data</p>
+    <p v-if="!loading && !users.length && !error" class="mt-8">No data</p>
+
+    <!-- if there's an error -->
+    <p v-if="error" class="mt-8 text-red-500">
+      {{ error }}
+    </p>
 
     <!-- pagination -->
     <div class="box-center mt-8 gap-x-4">
