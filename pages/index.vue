@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen p-8 w-full">
+  <main class="min-h-screen p-4 md:p-8 w-full">
     <p v-if="error" class="text-red-500">
       {{ error }}
     </p>
@@ -8,7 +8,7 @@
     <IndexTitleBox />
 
     <!-- loading placeholder -->
-    <section v-if="loading" class="grid grid-cols-4 mt-8 gap-4">
+    <section v-if="loading" class="grid md:grid-cols-4 mt-8 gap-4">
       <IndexUserSkeleton />
       <IndexUserSkeleton />
       <IndexUserSkeleton />
@@ -16,7 +16,7 @@
     </section>
 
     <!-- data -->
-    <section v-else class="grid grid-cols-4 mt-8 gap-4">
+    <section v-else class="grid md:grid-cols-4 mt-8 gap-4">
       <IndexUser
         v-for="(user, index) in usersShown"
         :key="'user-' + user.email + index"

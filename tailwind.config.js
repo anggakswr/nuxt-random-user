@@ -12,6 +12,12 @@ module.exports = {
       colors: {
         brand: '#33bdbf',
       },
+      spacing: {
+        '58px': '58px',
+        '84px': '84px',
+        '150px': '150px',
+        '250px': '250px',
+      },
     },
   },
   variants: {

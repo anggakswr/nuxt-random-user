@@ -7,6 +7,7 @@ import {
   uniSearch,
   uniPlus,
   uniEllipsisH,
+  uniBars,
 } from 'vue-unicons/dist/icons'
 
 Unicon.add([
@@ -16,5 +17,6 @@ Unicon.add([
   uniSearch,
   uniPlus,
   uniEllipsisH,
+  uniBars,
 ])
 Vue.use(Unicon)

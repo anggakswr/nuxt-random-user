@@ -3,7 +3,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-random-user',
+    title: 'Gadjian',
     htmlAttrs: {
       lang: 'en',
     },

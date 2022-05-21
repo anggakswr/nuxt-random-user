@@ -1,14 +1,26 @@
 <template>
-  <header class="fixed inset-x-0 p-4 bg-white box-between">
-    <!-- logo -->
-    <NuxtLink to="/">
-      <!-- img -->
-      <img src="/logo.png" alt="Gadjian Logo" class="w-32" />
-    </NuxtLink>
+  <header class="fixed z-10 inset-x-0 p-2 md:p-4 bg-white box-between">
+    <div class="box-equal gap-x-4">
+      <!-- hamburger btn -->
+      <button class="box-center">
+        <!-- icon -->
+        <client-only>
+          <unicon name="bars" />
+        </client-only>
+      </button>
+
+      <!-- logo -->
+      <NuxtLink to="/">
+        <!-- img -->
+        <img src="/logo.png" alt="Gadjian Logo" class="w-16 md:w-32" />
+      </NuxtLink>
+    </div>
 
     <div class="box-equal gap-x-4">
       <!-- hello text -->
-      <p>Hello, <b class="text-brand">Gadjian User</b></p>
+      <p class="hidden md:block">
+        Hello, <b class="text-brand">Gadjian User</b>
+      </p>
 
       <button class="rounded-full overflow-hidden border">
         <!-- photo -->
