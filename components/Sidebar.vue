@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white p-4 sidebar fixed inset-y-0 left-0"
+    class="bg-white p-4 sidebar fixed inset-y-0 left-0 hidden md:block"
     :style="{ top: '84px' }"
   >
     <!-- links -->

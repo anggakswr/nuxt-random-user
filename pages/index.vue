@@ -67,16 +67,22 @@ export default {
   methods: {
     prevPage() {
       if (this.cut > 0) {
-        this.usersShown = this.users.slice(this.cut - 4, this.until - 4)
-        this.cut = this.cut - 4
-        this.until = this.until - 4
+        const cut = this.cut - 4
+        const until = this.until - 4
+
+        this.usersShown = this.users.slice(cut, until)
+        this.cut = cut
+        this.until = until
       }
     },
     nextPage() {
       if (this.cut < 24) {
-        this.usersShown = this.users.slice(this.cut + 4, this.until + 4)
-        this.cut = this.cut + 4
-        this.until = this.until + 4
+        const cut = this.cut + 4
+        const until = this.until + 4
+
+        this.usersShown = this.users.slice(cut, until)
+        this.cut = cut
+        this.until = until
       }
     },
     async getUsers() {
