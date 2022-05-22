@@ -1,13 +1,14 @@
 import { shallowMount, config } from '@vue/test-utils'
 import Vue from 'vue'
 import axios from 'axios'
+import apiData from './apiData'
 import index from '@/pages/index.vue'
 
 config.mocks.$t = (msg) => msg
 
 const mockUsers = {
   data: {
-    results: {},
+    results: apiData,
   },
 }
 
@@ -54,10 +55,22 @@ describe('index page', () => {
 
     // search result should exist
     const users = wrapper.findAll('indexuser-stub')
-    expect(users.length).toBe(0)
+    expect(users.length).toBe(4)
 
-    // err msg should not exist
-    const errDesc = wrapper.find('[data-testid="err-desc"]')
-    expect(errDesc.exists()).toBe(true)
+    // click next page
+    const nextBtn = wrapper.get('[data-testid="next-btn"]')
+    await nextBtn.trigger('click')
+
+    // should show the next page's data
+    const users2 = wrapper.findAll('indexuser-stub')
+    expect(users2.length).toBe(3)
+
+    // click prev page
+    const prevBtn = wrapper.get('[data-testid="prev-btn"]')
+    await prevBtn.trigger('click')
+
+    // should show the prev page's data
+    const users3 = wrapper.findAll('indexuser-stub')
+    expect(users3.length).toBe(4)
   })
 })

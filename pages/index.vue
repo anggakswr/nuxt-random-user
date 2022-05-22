@@ -36,12 +36,16 @@
 
     <!-- pagination -->
     <div class="box-center mt-8 gap-x-4">
-      <button :disabled="cut < 1" @click="prevPage">
+      <button data-testid="prev-btn" :disabled="cut < 1" @click="prevPage">
         <span>&larr;</span>
         <span>Previous Page</span>
       </button>
 
-      <button :disabled="cut > 23" @click="nextPage">
+      <button
+        data-testid="next-btn"
+        :disabled="cut > users.length - 5"
+        @click="nextPage"
+      >
         <span>Next Page</span>
         <span>&rarr;</span>
       </button>
