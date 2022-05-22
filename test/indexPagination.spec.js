@@ -36,26 +36,30 @@ describe('index page', () => {
 
     expect(axios.get).toHaveBeenCalledTimes(1)
 
-    // wait for the DOM changes
+    // wait for the DOM to change
     await Vue.nextTick()
 
     // loading placeholder appear
     const skeletons = wrapper.findAll('indexuserskeleton-stub')
     expect(skeletons.length).toBe(4)
 
-    // wait for the DOM changes
+    // wait for the DOM to change
     await Vue.nextTick()
 
     // loading placeholder gone
     const skeletons2 = wrapper.findAll('indexuserskeleton-stub')
     expect(skeletons2.length).toBe(0)
 
-    // wait for the DOM changes
+    // wait for the DOM to change
     await Vue.nextTick()
 
-    // search result should exist
+    // users should exist
     const users = wrapper.findAll('indexuser-stub')
     expect(users.length).toBe(4)
+
+    // prev btn should disabled
+    const prevBtn2 = wrapper.get('[data-testid="prev-btn"]')
+    expect(prevBtn2.element.disabled).toBe(true)
 
     // click next page
     const nextBtn = wrapper.get('[data-testid="next-btn"]')
@@ -64,6 +68,10 @@ describe('index page', () => {
     // should show the next page's data
     const users2 = wrapper.findAll('indexuser-stub')
     expect(users2.length).toBe(3)
+
+    // next btn should disabled
+    const nextBtn2 = wrapper.get('[data-testid="next-btn"]')
+    expect(nextBtn2.element.disabled).toBe(true)
 
     // click prev page
     const prevBtn = wrapper.get('[data-testid="prev-btn"]')
