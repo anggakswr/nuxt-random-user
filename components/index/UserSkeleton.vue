@@ -2,10 +2,10 @@
   <div class="bg-white rounded-lg">
     <!-- header -->
     <div class="p-2 border-b box-between">
-      <div class="text-sm bg-gray-300 animate-pulse h-4 w-44" />
+      <div class="text-sm pulse w-44" />
 
       <!-- option / more btn -->
-      <div class="h-4 w-6 bg-gray-300 animate-pulse" />
+      <div class="w-6 pulse" />
     </div>
 
     <!-- user info (desktop) -->

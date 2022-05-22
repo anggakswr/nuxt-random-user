@@ -7,11 +7,11 @@
     </div>
 
     <div>
-      <div class="h-4 w-10 bg-gray-300 animate-pulse mb-2" />
-      <div class="mb-2 break-words bg-gray-300 animate-pulse h-4 w-28" />
+      <div class="w-10 pulse mb-2" />
+      <div class="mb-2 break-words pulse w-28" />
 
-      <div class="h-4 w-10 bg-gray-300 animate-pulse mb-2" />
-      <div class="mb-2 break-words bg-gray-300 animate-pulse h-4 w-44" />
+      <div class="w-10 pulse mb-2" />
+      <div class="mb-2 break-words pulse w-44" />
     </div>
   </div>
 </template>
