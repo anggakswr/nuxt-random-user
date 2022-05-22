@@ -21,10 +21,16 @@
     </section>
 
     <!-- if there's no data -->
-    <p v-if="!loading && !users.length && !error" class="mt-8">No data</p>
+    <p
+      v-if="!loading && !users.length && !error"
+      class="mt-8"
+      data-testid="nodata-desc"
+    >
+      No data
+    </p>
 
     <!-- if there's an error -->
-    <p v-if="error" class="mt-8 text-red-500">
+    <p v-if="error" class="mt-8 text-red-500" data-testid="err-desc">
       {{ error }}
     </p>
 
@@ -57,13 +63,13 @@ export default {
       until: 4,
     }
   },
-  fetch() {
-    this.getUsers()
-  },
   head() {
     return {
       title: 'Personeel List | Gadjian',
     }
+  },
+  mounted() {
+    this.getUsers()
   },
   methods: {
     prevPage() {
